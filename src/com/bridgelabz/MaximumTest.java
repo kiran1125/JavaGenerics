@@ -9,6 +9,7 @@ public class MaximumTest {
    //class level variables
    public Integer x,y,z;
    public Float a,b,c;
+   public String s1,s2,s3;
 
    /**
     *passing three integers as parameters0 to get maximum number
@@ -51,4 +52,25 @@ public class MaximumTest {
          maximum = c;
       return maximum;
    }
+
+    /**
+     * Comparing the three strings and returning the maximum string
+     * @param s1
+     * @param s2
+     * @param s3
+     * @return maximum
+     */
+    String maximumOfStrings(String s1,String s2, String s3){
+        this.s1 = s1;
+        this.s2 = s2;
+        this.s3 = s3;
+        String maximum = null;
+        if(s1.compareTo(s2) > 0 && s1.compareTo(s3) > 0)
+            maximum = s1;
+        else if (s2.compareTo(s1) > 0 && s2.compareTo(s3) > 0)
+            maximum = s2;
+        else
+            maximum = s3;
+        return maximum;
+    }
 }
