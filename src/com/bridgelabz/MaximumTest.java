@@ -26,7 +26,7 @@ public class MaximumTest<T extends Comparable> {
     *passing three objects as parameters to get maximum number
     * @return maximum
     */
-   T maximumOfObjects(T x,T y,T z){
+   T maximum(){
       T maximum = null;
       if(x.compareTo(y) > 0 && x.compareTo(z) > 0)
          maximum = x;
@@ -36,5 +36,7 @@ public class MaximumTest<T extends Comparable> {
          maximum = z;
       return maximum;   //returning largest one
    }
-
+   public <T> void printMax(){
+      System.out.println("Maximum number is : " + this.maximum());
+   }
 }
